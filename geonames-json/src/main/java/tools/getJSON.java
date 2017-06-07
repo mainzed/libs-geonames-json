@@ -92,7 +92,7 @@ public class getJSON extends HttpServlet {
 				if (startTagName != -1 && endTagName != -1) {
 					name = responseGeoNames.substring(startTagName, endTagName).replace("<name>", "");
 				}
-				
+
 				int startTagWest = responseGeoNames.indexOf("<west>");
 				int endTagWest = responseGeoNames.indexOf("</west>");
 				if (startTagWest != -1 && endTagWest != -1) {
@@ -103,7 +103,7 @@ public class getJSON extends HttpServlet {
 				if (startTagNorth != -1 && endTagNorth != -1) {
 					north = Double.parseDouble(responseGeoNames.substring(startTagNorth, endTagNorth).replace("<north>", ""));
 				}
-				
+
 				int startTagEast = responseGeoNames.indexOf("<east>");
 				int endTagEast = responseGeoNames.indexOf("</east>");
 				if (startTagEast != -1 && endTagEast != -1) {
